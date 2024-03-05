@@ -26,7 +26,7 @@ public class TokenData {
     public static String getListInfo() {
         StringBuilder builder = new StringBuilder();
         for (TokenInfo token : tokenInfoMap.values())
-            builder.append(String.format("%s, %s, %s\n", token.getSymbol(),
+            builder.append(String.format("<b>%s</b> (%s) — %s\n", token.getSymbol(),
                     token.getName(), token.getPriceUsd()));
         return builder.toString().trim();
     }
