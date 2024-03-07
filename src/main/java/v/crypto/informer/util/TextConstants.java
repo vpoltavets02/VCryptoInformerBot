@@ -18,4 +18,51 @@ public class TextConstants {
             \uD83D\uDCCA /stat - get a stat about tokens from your list
 
             ❓ /help - get a list of all available commands""";
+
+    public static final String EMPTY_LIST = "You need to add at least one token" +
+            " to see statistic. For adding token to your list use command /add";
+
+    public static final String FULL_LIST = "You reached the maximum number of tokens in your list." +
+            " Remove at least one token to add new token.";
+
+    public static final String TOKEN_LIST = """
+            1INCH AAVE ADA AGIX AKT
+            
+            ALGO AR ATOM AVAX AXS
+            
+            BCH BNB BSV BTC BTCB
+            
+            BTG CAKE CELO CFX CHZ
+            
+            CKB COMP CRO CRV DAI
+            
+            DOGE DOT DYDX EGLD ENJ
+            
+            EOS ETC ETH FET FIL
+            
+            FLOW FTM FTT FXS GALA
+            
+            GLM GNO GRT HBAR HNT
+            
+            HOT ICP INJ IOTA IOTX
+            
+            KAVA KCS KLAY LDO LEO
+            
+            LINK LTC MANA MATIC MINA
+            
+            MKR NEAR NEO NEXO OCEAN
+            
+            OKB PENDLE QNT RBN RNDR
+            
+            ROSE RPL RUNE SAND SHIB
+            
+            SNX SOL STX SUPER TFUEL
+            
+            THETA TRAC TRX TUSD TWT
+            
+            UNI USDC USDT VET WBTC
+            
+            WEMIX WOO XDC XEC XLM
+            
+            XMR XRP XTZ ZEC ZIL""";
 }

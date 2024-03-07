@@ -22,12 +22,4 @@ public class TokenData {
         for (TokenInfo token : tokenInfoList)
             tokenInfoMap.put(token.getSymbol(), token);
     }
-
-    public static String getListInfo() {
-        StringBuilder builder = new StringBuilder();
-        for (TokenInfo token : tokenInfoMap.values())
-            builder.append(String.format("<b>%s</b> (%s) — %s\n", token.getSymbol(),
-                    token.getName(), token.getPriceUsd()));
-        return builder.toString().trim();
-    }
 }
