@@ -7,7 +7,6 @@ import v.crypto.informer.service.impl.UserService;
 import v.crypto.informer.util.TextConstants;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 public class StartCommand implements Command {

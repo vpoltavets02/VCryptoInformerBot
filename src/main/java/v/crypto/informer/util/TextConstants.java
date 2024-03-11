@@ -1,19 +1,21 @@
 package v.crypto.informer.util;
 
 public class TextConstants {
-    public static final String START_MESSAGE = "\uD83D\uDC4B Welcome to my Telegram bot! Here, you can stay updated on the latest crypto token " +
-            "rates. Whether you're a seasoned investor or just curious about the world of cryptocurrencies, my bot " +
-            "is here to provide you with real-time information on token prices. Feel free to explore and discover " +
-            "the exciting world of crypto! Happy trading! \uD83D\uDE80\uD83D\uDCC8";
+    public static final String START_MESSAGE = """
+            \uD83D\uDC4B Welcome to my Telegram bot! Here, you can stay updated on the latest crypto token rates. Whether you're a seasoned investor or just curious about the world of cryptocurrencies, my bot is here to provide you with real-time information on token prices. Feel free to explore and discover the exciting world of crypto! Happy trading! \uD83D\uDE80\uD83D\uDCC8
+
+            To get help use /help command""";
 
     public static final String HELP_MESSAGE = """
             Here the whole list of all available commands:
 
             \uD83C\uDFC1 /start - start bot
+                        
+            \uD83D\uDCCB /all_tokens - display list of all available tokens
 
-            ➕ /add - add crypto token to your list
+            ➕ /add tokenName - add crypto token to your list (example /add btc)
 
-            ➖ /remove - remove crypto token from your list
+            ➖ /remove tokenName - remove crypto token from your list (example /remove btc)
 
             \uD83D\uDCCA /stat - get a stat about tokens from your list
 
@@ -26,43 +28,43 @@ public class TextConstants {
             " Remove at least one token to add new token.";
 
     public static final String TOKEN_LIST = """
-            1INCH AAVE ADA AGIX AKT
+            BTC ETH USDT    BNB	SOL
             
-            ALGO AR ATOM AVAX AXS
+            USDC	XRP	ADA	DOGE	SHIB
             
-            BCH BNB BSV BTC BTCB
+            AVAX	DOT	TRX	LINK	MATIC
             
-            BTG CAKE CELO CFX CHZ
+            WBTC	UNI	BCH	ICP	LTC
             
-            CKB COMP CRO CRV DAI
+            ETC	NEAR	LEO	DAI	FIL
             
-            DOGE DOT DYDX EGLD ENJ
+            STX	XLM	CRO	OKB	RNDR
             
-            EOS ETC ETH FET FIL
+            VET	ATOM	GRT	THETA	INJ
             
-            FLOW FTM FTT FXS GALA
+            LDO	XMR	RUNE	AR	BTCB
             
-            GLM GNO GRT HBAR HNT
+            FTM	BSV	ALGO	FET	AAVE
             
-            HOT ICP INJ IOTA IOTX
+            FLOW	HBAR	MKR	EGLD	SAND
             
-            KAVA KCS KLAY LDO LEO
+            QNT	AXS	AGIX	HNT	KCS
             
-            LINK LTC MANA MATIC MINA
+            MINA	XTZ	AKT	CHZ	EOS
             
-            MKR NEAR NEO NEXO OCEAN
+            XEC	MANA	TUSD	GALA	CFX
             
-            OKB PENDLE QNT RBN RNDR
+            NEO	KAVA	ROSE	WEMIX	WOO
             
-            ROSE RPL RUNE SAND SHIB
+            GNO	IOTA	KLAY	SNX	BTG
             
-            SNX SOL STX SUPER TFUEL
+            CKB	CAKE	CRV	RBN	NEXO
             
-            THETA TRAC TRX TUSD TWT
+            FTT	DYDX	PENDLE	ENJ	SUPER
             
-            UNI USDC USDT VET WBTC
+            COMP	1INCH	RPL	HOT	GLM
             
-            WEMIX WOO XDC XEC XLM
+            FXS	OCEAN	TWT	CELO	TFUEL
             
-            XMR XRP XTZ ZEC ZIL""";
+            ZIL	IOTX	CSPR	AIOZ	TRAC""";
 }

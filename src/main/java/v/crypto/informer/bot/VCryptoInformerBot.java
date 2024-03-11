@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import v.crypto.informer.command.CommandContainer;
-import v.crypto.informer.command.CommandName;
+import v.crypto.informer.enums.CommandName;
 import v.crypto.informer.service.impl.SendBotMessageServiceImpl;
 import v.crypto.informer.service.impl.UserService;
 
