@@ -17,11 +17,11 @@ public class TokenInfo {
     }
 
     public void setPriceUsd(String priceUsd) {
-        this.priceUsd = String.format("%.6f$", Double.valueOf(priceUsd));
+        this.priceUsd = String.format("%.6f", Double.valueOf(priceUsd));
     }
 
     @Override
     public String toString() {
-        return String.format("%s\t%s\t%s$", symbol, name, priceUsd);
+        return String.format("<b>%s</b> (%s) — %s<b>$</b>\n", symbol, name, priceUsd);
     }
 }

@@ -4,39 +4,40 @@ import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
-import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import v.crypto.informer.data.TokenData;
+import v.crypto.informer.command.CommandContainer;
+import v.crypto.informer.enums.CommandName;
+import v.crypto.informer.service.impl.SendBotMessageServiceImpl;
+import v.crypto.informer.service.impl.UserService;
 
 @Log4j
 @Component
 public class VCryptoInformerBot extends TelegramLongPollingBot {
+
     @Value("${bot.username}")
     private String botUsername;
+    private final CommandContainer commandContainer;
 
-    public VCryptoInformerBot(@Value("${bot.token}") String botToken) {
+    public VCryptoInformerBot(@Value("${bot.token}") String botToken, UserService userService) {
         super(botToken);
+        this.commandContainer = new CommandContainer(userService, new SendBotMessageServiceImpl(this));
     }
 
     @Override
     public void onUpdateReceived(Update update) {
-        if (!update.hasMessage() || !update.getMessage().hasText())
-            return;
-        long chatId = update.getMessage().getChatId();
-        sendMessage(chatId, TokenData.getListInfo());
+        if (update.hasMessage() && update.getMessage().hasText()) {
+            var message = update.getMessage().getText().trim();
+            if (message.startsWith("/")) {
+                var commandIdentifier = message.split(" ")[0].toLowerCase();
+                commandContainer.retrieveCommand(commandIdentifier).execute(update);
+            } else {
+                commandContainer.retrieveCommand(CommandName.NO.getCommandName()).execute(update);
+            }
+        }
     }
 
     @Override
     public String getBotUsername() {
         return botUsername;
-    }
-
-    private void sendMessage(long chatId, String message) {
-        try {
-            execute(new SendMessage(String.valueOf(chatId), message));
-        } catch (TelegramApiException e) {
-            log.error("Something went wrong while message sending", e);
-        }
     }
 }
