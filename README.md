@@ -1,6 +1,6 @@
 # VCryptoInformerBot
 
-Telegram bot for informing users about changes in cryptocurrency world
+Telegram bot for informing users about changes in cryptocurrency world. You can try it [here](https://t.me/vcryptoinformerbot)
 
 ## Table of Contents
 * [General](#general-information)
