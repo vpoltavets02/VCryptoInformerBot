@@ -38,24 +38,24 @@ Fill [application.properties](https://github.com/vpoltavets02/VCryptoInformerBot
 Run application with using your IDE
 
 ## Screenshots
-Execution of `/start` and `/help` commands:
+* Execution of `/start` and `/help` commands:
 
 <img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/1.jpg" width="25%" heigth="25%"/>
 
-Execution of `/all_tokens` command:
+* Execution of `/all_tokens` command:
 
 <img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/2.jpg" width="25%" heigth="25%"/>
 
-The list of available commands by clicking on commands button:
+* The list of available commands by clicking on commands button:
 
 <img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/3.jpg" width="25%" heigth="25%"/>
 
-Execution of `/stat` command when user doesn't have any tokens in their list and execution of `/add` command:
+* Execution of `/stat` command when user doesn't have any tokens in their list and execution of `/add` command:
 
 <img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/4.jpg" width="25%" heigth="25%"/>
 
-User got a message that he/she reached the maximum number of tokens in their list because the maximum number of tokens in the list is <b>5</b>
+User got a message that they reached the maximum number of tokens in their list because the maximum number of tokens in the list is <b>5</b>
 
-Executiion of `/stat` and `/remove` commands:
+* Executiion of `/stat` and `/remove` commands:
 
 <img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/5.jpg" width="25%" heigth="25%"/>
