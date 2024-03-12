@@ -22,6 +22,7 @@ For writing this project, I used the next list of technologies:
 * Spring Data JPA
 * Telegram Bot API 6.9.7.1
 * PostgreSQL
+* Apache Maven
 * Log4j
 
 ## Setup
