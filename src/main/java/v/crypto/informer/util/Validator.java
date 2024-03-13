@@ -11,7 +11,7 @@ public class Validator {
         } else {
             var token = splitMessage[1].toUpperCase();
             if (!TokenData.tokenInfoMap.containsKey(token))
-                result = String.format("I don't know anything about %s. Please use /allTokens command to get a list of tokens which I know", token);
+                result = String.format("I don't know anything about %s. Please use /all_tokens command to get a list of tokens which I know", token);
             else if (user.getList().contains(token))
                 result = String.format("You had already added %s to your list", token);
         }

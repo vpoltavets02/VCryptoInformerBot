@@ -23,7 +23,7 @@ public class StartCommand implements Command {
         var id = update.getMessage().getFrom().getId();
         Optional<User> optionalUser = userService.findUserById(id);
         if (optionalUser.isEmpty())
-            userService.save(new User(id, new ArrayList<>()));
-        sendBotMessageService.sendMessage(update.getMessage().getChatId().toString(), TextConstants.START_MESSAGE);
+            userService.save(new User(id, true, new ArrayList<>()));
+        sendBotMessageService.sendMessage(String.valueOf(id), TextConstants.START_MESSAGE);
     }
 }

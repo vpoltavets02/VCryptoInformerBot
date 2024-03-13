@@ -1,4 +1,4 @@
-package v.crypto.informer.enums;
+package v.crypto.informer.command.enums;
 
 import lombok.Getter;
 
@@ -10,6 +10,8 @@ public enum CommandName {
     REMOVE("/remove"),
     STAT("/stat"),
     ALL_TOKENS("/all_tokens"),
+    NOTIFICATIONS("/notifications"),
+    PROFILE("/profile"),
     HELP("/help");
 
     private final String commandName;

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import v.crypto.informer.command.CommandContainer;
-import v.crypto.informer.enums.CommandName;
+import v.crypto.informer.command.enums.CommandName;
 import v.crypto.informer.service.impl.SendBotMessageServiceImpl;
 import v.crypto.informer.service.impl.UserService;
 
@@ -25,7 +25,9 @@ public class VCryptoInformerBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        if (update.hasMessage() && update.getMessage().hasText()) {
+        if (!update.hasMessage() || !update.getMessage().hasText()) {
+            commandContainer.retrieveCommand(CommandName.NO.getCommandName()).execute(update);
+        } else {
             var message = update.getMessage().getText().trim();
             if (message.startsWith("/")) {
                 var commandIdentifier = message.split(" ")[0].toLowerCase();

@@ -1,6 +1,7 @@
 package v.crypto.informer.service.impl;
 
 import jakarta.transaction.Transactional;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 import v.crypto.informer.model.User;
 import v.crypto.informer.repository.UserRepository;
@@ -24,6 +25,10 @@ public class UserService {
         return repository.findById(id);
     }
 
+    public List<User> findByNotificationsTrue() {
+        return repository.findByNotificationsTrue();
+    }
+
     @Transactional
     public void save(User userToSave) {
         repository.save(userToSave);
@@ -35,6 +40,7 @@ public class UserService {
         if (optionalUser.isPresent()) {
             var user = optionalUser.get();
             user.setList(updatedUser.getList());
+            user.setNotifications(updatedUser.getNotifications());
             save(user);
         }
     }

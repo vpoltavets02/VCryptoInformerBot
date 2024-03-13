@@ -20,7 +20,7 @@ public class StatSenderServiceImpl implements StatSenderService {
     @Override
     @Scheduled(fixedDelay = 60 * 60 * 1000)
     public void sendStat() {
-        var users = userService.findAllUsers();
+        var users = userService.findByNotificationsTrue();
         for (User user : users) {
             String stat = StatGenerator.generateStat(user);
             if (!stat.isEmpty())

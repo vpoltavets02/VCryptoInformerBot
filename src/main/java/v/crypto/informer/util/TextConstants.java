@@ -10,12 +10,16 @@ public class TextConstants {
             Here the whole list of all available commands:
 
             \uD83C\uDFC1 /start - start bot
+            
+            \uD83D\uDC64 /profile - view profile
+            
+            \uD83D\uDD14 /notifications - turn on/off notifications
                         
             \uD83D\uDCCB /all_tokens - display list of all available tokens
 
-            ➕ /add tokenName - add crypto token to your list (example /add btc)
+            ➕ /add <b>tokenName</b> - add crypto token to your list (example /add btc)
 
-            ➖ /remove tokenName - remove crypto token from your list (example /remove btc)
+            ➖ /remove <b>tokenName</b> - remove crypto token from your list (example /remove btc)
 
             \uD83D\uDCCA /stat - get a stat about tokens from your list
 
