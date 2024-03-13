@@ -11,8 +11,10 @@ Telegram bot for informing users about changes in cryptocurrency world. You can 
 ## General information
 This bot was created as a studying project for my portfolio. I was interested in creating something different from a common backend application with Spring Boot, so I decided to create my own telegram bot. The main purposes of this bot are:
 * Displaying the list of all available tokens with command `/all_tokens`
+* Turning on/off notifications from bot with help of `/notifications` command
 * Adding/removing tokens from user list using `/add` and `/remove` commands respectively
 * Getting statistic with using command `/stat`
+* Displaying profile of user in the bot using command `/profile`
 * Hourly informing users about token price changes in their token lists
 
 ## Techlogies
@@ -41,22 +43,22 @@ Run application with using your IDE
 ## Screenshots
 * Execution of `/start` and `/help` commands:
 
-<img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/1.jpg" width="25%" heigth="25%"/>
+<img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/1.jpg" target="_blank" width="25%" heigth="25%"/>
 
 * Execution of `/all_tokens` command:
 
-<img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/2.jpg" width="25%" heigth="25%"/>
+<img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/2.jpg" target="_blank" width="25%" heigth="25%"/>
 
 * The list of available commands by clicking on commands button:
 
-<img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/3.jpg" width="25%" heigth="25%"/>
+<img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/3.jpg" target="_blank" width="25%" heigth="25%"/>
 
 * Execution of `/stat` command when user doesn't have any tokens in their list and execution of `/add` command:
 
-<img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/4.jpg" width="25%" heigth="25%"/>
+<img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/4.jpg" target="_blank" width="25%" heigth="25%"/>
 
 User got a message that they reached the maximum number of tokens in their list because the maximum number of tokens in the list is <b>5</b>
 
 * Executiion of `/stat` and `/remove` commands:
 
-<img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/5.jpg" width="25%" heigth="25%"/>
+<img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/5.jpg" target="_blank" width="25%" heigth="25%"/>
