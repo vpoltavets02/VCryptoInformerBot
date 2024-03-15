@@ -9,7 +9,6 @@ public enum CommandName {
     ADD("/add"),
     REMOVE("/remove"),
     STAT("/stat"),
-    ALL_TOKENS("/all_tokens"),
     NOTIFICATIONS("/notifications"),
     PROFILE("/profile"),
     HELP("/help");

@@ -1,18 +1,24 @@
 package v.crypto.informer.util;
 
 import org.springframework.stereotype.Component;
-import v.crypto.informer.data.TokenData;
 import v.crypto.informer.model.User;
+import v.crypto.informer.service.impl.TokenService;
 
 @Component
 public class StatGenerator {
-    public static String generateStat(User user) {
+    private final TokenService tokenService;
+
+    public StatGenerator(TokenService tokenService) {
+        this.tokenService = tokenService;
+    }
+
+    public String generateStat(User user) {
+        var userTokens = user.getList();
         StringBuilder builder = new StringBuilder();
-        var tokens = user.getList();
-        if (!tokens.isEmpty()) {
-            for (String tokenName : tokens) {
-                var token = TokenData.tokenInfoMap.get(tokenName);
-                builder.append(token.toString())
+        if (!userTokens.isEmpty()) {
+            for (String tokenName : userTokens) {
+                var token = tokenService.findTokenById(tokenName).get();
+                builder.append(token)
                         .append("\n");
             }
         }
