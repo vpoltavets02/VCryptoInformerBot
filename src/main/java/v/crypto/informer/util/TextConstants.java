@@ -4,7 +4,7 @@ public class TextConstants {
     public static final String START_MESSAGE = """
             \uD83D\uDC4B Welcome to my Telegram bot! Here, you can stay updated on the latest crypto token rates. Whether you're a seasoned investor or just curious about the world of cryptocurrencies, my bot is here to provide you with real-time information on token prices. Feel free to explore and discover the exciting world of crypto! Happy trading! \uD83D\uDE80\uD83D\uDCC8
 
-            To get help use ❓help0220 command""";
+            To get help use ❓help command""";
 
     public static final String HELP_MESSAGE = """
             Here the whole list of all available commands:
