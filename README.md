@@ -9,13 +9,14 @@ Telegram bot for informing users about changes in cryptocurrency world. You can 
 * [Screenshots](#screenshots)
 
 ## General information
-This bot was created as a studying project for my portfolio. I was interested in creating something different from a common backend application with Spring Boot, so I decided to create my own telegram bot. The main purposes of this bot are:
-* Displaying the list of all available tokens with command `/all_tokens`
-* Turning on/off notifications from bot with help of `/notifications` command
-* Adding/removing tokens from user list using `/add` and `/remove` commands respectively
-* Getting statistic with using command `/stat`
-* Displaying profile of user in the bot using command `/profile`
+This bot was created as a studying project for my portfolio. I was interested in creating something different from a common backend application with Spring Boot, so I decided to create my own telegram bot. For controling bot, user need to use commands menu. The main functions of this bot are:
+* Displaying profile of user in the bot using command 👤<b>Profile</b>
+* Turning on/off notifications from bot with help of 🔔<b>Notifications</b> command
+* Adding tokens to user list using ➕<b>Add</b> command
+* Removing tokens from user list with ➖<b>Remove</b> command
+* Getting statistic with using command 📊<b>Statistic</b>
 * Hourly informing users about token price changes in their token lists
+* Getting the whole list of all available commands using ❓help command
 
 ## Techlogies
 For writing this project, I used the next list of technologies:
@@ -28,17 +29,17 @@ For writing this project, I used the next list of technologies:
 * Log4j
 
 ## Setup
-To run this project, clone it to your computer with using git bash:
+1. To run this project, clone it to your computer with using git bash:
 ```bash
 git clone https://github.com/vpoltavets02/VCryptoInformerBot.git
 ```
-Create database for project and select it. Then run a [script](https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/src/main/resources/schema.sql) for creating <b>User</b> table in your created database
+2. Create database for project and select it. Then run a [script](https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/src/main/resources/schema.sql) for creating <b>User</b> table in your created database
 
-Create your own telegram bot with [BotFather](https://t.me/botfather) and get unique token to access the HTTP API
+3. Create your own telegram bot with [BotFather](https://t.me/botfather) and get unique token to access the HTTP API
 
-Fill [application.properties](https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/src/main/resources/application.properties) with your configuration information
+4. Fill [application.properties](https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/src/main/resources/application.properties) with your configuration information
 
-Run application with using your IDE
+5. Run application with using your IDE
 
 ## Screenshots
 * Execution of `/start` and `/help` commands:

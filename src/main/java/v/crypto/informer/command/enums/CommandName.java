@@ -6,13 +6,12 @@ import lombok.Getter;
 public enum CommandName {
     NO("no"),
     START("/start"),
-    ADD("/add"),
-    REMOVE("/remove"),
-    STAT("/stat"),
-    ALL_TOKENS("/all_tokens"),
-    NOTIFICATIONS("/notifications"),
-    PROFILE("/profile"),
-    HELP("/help");
+    ADD("➕Add"),
+    REMOVE("➖Remove"),
+    STAT("\uD83D\uDCCAStatistic"),
+    NOTIFICATIONS("\uD83D\uDD14Notifications"),
+    PROFILE("\uD83D\uDC64Profile"),
+    HELP("❓Help");
 
     private final String commandName;
 

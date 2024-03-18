@@ -22,8 +22,12 @@ public class StartCommand implements Command {
     public void execute(Update update) {
         var id = update.getMessage().getFrom().getId();
         Optional<User> optionalUser = userService.findUserById(id);
-        if (optionalUser.isEmpty())
+        if (optionalUser.isEmpty()) {
             userService.save(new User(id, true, new ArrayList<>()));
-        sendBotMessageService.sendMessage(String.valueOf(id), TextConstants.START_MESSAGE);
+            sendBotMessageService.sendMessage(String.valueOf(id), TextConstants.START_MESSAGE);
+        } else {
+            sendBotMessageService.sendMessage(String.valueOf(id), "You're already registered in bot. To see the" +
+                    " whole list of available commands use ❓help");
+        }
     }
 }
