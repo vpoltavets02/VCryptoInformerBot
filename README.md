@@ -42,24 +42,22 @@ git clone https://github.com/vpoltavets02/VCryptoInformerBot.git
 5. Run application with using your IDE
 
 ## Screenshots
-* Execution of `/start` and `/help` commands:
+* Execution of `start` and `help` commands:
 
 <img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/1.jpg" target="_blank" width="25%" heigth="25%"/>
 
-* Execution of `/all_tokens` command:
+* Execution of `add` command:
 
 <img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/2.jpg" target="_blank" width="25%" heigth="25%"/>
 
-* The list of available commands by clicking on commands button:
+* Execution of `statistic` command:
 
 <img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/3.jpg" target="_blank" width="25%" heigth="25%"/>
 
-* Execution of `/stat` command when user doesn't have any tokens in their list and execution of `/add` command:
+* Turning off notifications with using `notifications` command:
 
 <img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/4.jpg" target="_blank" width="25%" heigth="25%"/>
 
-User got a message that they reached the maximum number of tokens in their list because the maximum number of tokens in the list is <b>5</b>
-
-* Executiion of `/stat` and `/remove` commands:
+* Getting user profile after `profile` command execution:
 
 <img src="https://github.com/vpoltavets02/VCryptoInformerBot/blob/master/screenshots/5.jpg" target="_blank" width="25%" heigth="25%"/>
