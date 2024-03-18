@@ -4,6 +4,8 @@ import org.springframework.stereotype.Component;
 import v.crypto.informer.model.User;
 import v.crypto.informer.service.impl.TokenService;
 
+import java.util.Collections;
+
 @Component
 public class StatGenerator {
     private final TokenService tokenService;
@@ -14,6 +16,7 @@ public class StatGenerator {
 
     public String generateStat(User user) {
         var userTokens = user.getList();
+        Collections.sort(userTokens);
         StringBuilder builder = new StringBuilder();
         if (!userTokens.isEmpty()) {
             for (String tokenName : userTokens) {

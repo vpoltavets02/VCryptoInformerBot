@@ -12,8 +12,8 @@ public class NotCommand implements Command {
 
     @Override
     public void execute(Update update) {
-        String text = "I'm sorry, but I support only commands which starts with (/).\n" +
-                "To see the whole list of available commands use command /help.";
+        String text = "I'm sorry, but I support only commands from command menu.\n" +
+                "To see the whole list of available commands use ❓help";
         sendBotMessageService.sendMessage(update.getMessage().getChatId().toString(), text);
     }
 }

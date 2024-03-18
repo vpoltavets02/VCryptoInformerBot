@@ -1,6 +1,9 @@
 package v.crypto.informer.service.impl;
 
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import v.crypto.informer.model.TokenInfo;
 import v.crypto.informer.repository.TokenRepository;
@@ -26,6 +29,10 @@ public class TokenService {
 
     public Optional<TokenInfo> findTokenById(String id) {
         return tokenRepository.findById(id);
+    }
+
+    public Page<TokenInfo> getTokensPage(int page) {
+        return tokenRepository.findAll(PageRequest.of(page, 10).withSort(Sort.by("priceUsd").descending()));
     }
 
     @Transactional

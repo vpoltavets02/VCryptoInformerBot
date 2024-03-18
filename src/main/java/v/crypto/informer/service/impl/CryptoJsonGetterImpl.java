@@ -7,13 +7,8 @@ import org.springframework.web.reactive.function.client.WebClient;
 import v.crypto.informer.model.TokenInfo;
 import v.crypto.informer.model.TokenInfoCollection;
 import v.crypto.informer.service.CryptoJsonGetter;
-import v.crypto.informer.util.TextConstants;
-import v.crypto.informer.util.TokenListUpdater;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
-import java.util.StringJoiner;
 
 @Log4j
 @Service
@@ -27,7 +22,7 @@ public class CryptoJsonGetterImpl implements CryptoJsonGetter {
     }
 
     @Override
-    @Scheduled(fixedDelay = 50_000)
+    @Scheduled(fixedDelay = 5_000)
     public void getJson() {
         TokenInfoCollection response = webClient.get()
                 .retrieve()
@@ -38,7 +33,6 @@ public class CryptoJsonGetterImpl implements CryptoJsonGetter {
             for (TokenInfo token : tokens) {
                 tokenService.updateToken(token.getSymbol(), token);
             }
-            TokenListUpdater.updateTokenList(tokenService);
         }
     }
 }
